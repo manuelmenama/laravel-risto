@@ -1,1 +1,52 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+
+.my-container {
+    display: flex;
+    
+    aside {
+      width: calc(100% / 8);
+      background-color: lightgray;
+      height: calc(100vh - 75px);
+
+      
+      nav {
+        ul {
+          list-style: none;
+          padding: 0;
+          
+          li {
+            a {
+              display: block;
+              padding: 10px;
+              text-decoration: none;
+              color: black;
+              
+              &.active {
+                color: white;
+                background-color: gray;
+                position: relative;
+                
+                &::after {
+                  content: "";
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  bottom: 0;
+                  width: 5px;
+                  background-color: black;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    main {
+      width: calc(7 * 100% / 8);
+      background-color: lightblue;
+          height: calc(100vh - 75px);
+
+    }
+  }
